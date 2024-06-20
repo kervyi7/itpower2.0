@@ -1,0 +1,21 @@
+<div class="form">
+  <div class="close" *ngIf="inputType == 'tel'" (click)="close()">&#10006;</div>
+  <h3>{{header}}</h3>
+  <p *ngIf="text">{{text}}</p>
+  <p *ngIf="messageSentText && inputType == 'tel'">{{'FORM.PHONE_SENT' | translate}}</p>
+  <div>
+    <input *ngIf="inputType == 'email'" [class.error]="!isFormValid" type="{{inputType}}"
+      placeholder="{{inputPlaceholder}}" [(ngModel)]="inputValue" (focus)="changeFormValid()">
+    <input *ngIf="inputType == 'tel' && !messageSentText" inputmode="numeric" [class.error]="!isFormValid"
+      type="{{inputType}}" placeholder="+380 -- --- -- --" id="input" [(ngModel)]="inputValuePhone"
+      (keydown)="onKeyDown($event)" (input)="formatPhone()" (focus)="focus()">
+    <div *ngIf="!isFormValid && inputType == 'email'" class="error-message form-message">{{'FORM.EMAIL_ERROR'|
+      translate}}</div>
+    <div *ngIf="!isFormValid && inputType == 'tel'" class="error-message form-message">{{'FORM.PHONE_ERROR'| translate}}
+    </div>
+    <div *ngIf="messageSentText && inputType == 'email'" class="sent-message form-message">{{'FORM.EMAIL_SENT'|
+      translate}}</div>
+  </div>
+  <app-button *ngIf="inputType == 'email' || (inputType == 'tel' && !messageSentText)" [text]="buttonText" [isColored]=true
+    (click)="send()"></app-button>
+</div>

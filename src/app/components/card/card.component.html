@@ -1,0 +1,6 @@
+<div [ngClass]="color ? 'colored':'dark'" class="card"
+  [style.background]="color">
+  <i *ngIf="icon" [ngStyle]="{ 'background-image': 'url(' + icon + ')'}"></i>
+  <h3>{{ header }}</h3>
+  <p>{{ text }}</p>
+</div>

@@ -1,0 +1,48 @@
+button {
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  color: var(--white-text);
+  padding: 16px 24px;
+  border-radius: 36px;
+  font-size: 16px;
+  width: 100%;
+  transition-duration: .3s;
+  text-align: center;
+}
+
+.red {
+  background: #E23207;
+  opacity: 1;
+
+  &:hover {
+    background: #BB310F;
+    opacity: .9;
+  }
+
+  &:focus {
+    background: #701C07;
+  }
+}
+
+.grey {
+  gap: 10px;
+  background: var(--dark-background);
+  border: 1px solid #575757;
+
+  &:hover {
+    background: #292929;
+    border: 1px solid #575757
+  }
+
+  &:focus {
+    background: #191919;
+    border: 1px solid #575757
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .grey {
+    text-wrap: wrap;
+  }
+}

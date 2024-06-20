@@ -1,0 +1,83 @@
+.form {
+  box-shadow: var(--box-shadow);
+  padding: 36px 24px;
+  gap: 20px;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 48px);
+  height: calc(100% - 72px);
+  background: #FFFFFF;
+  position: relative;
+
+  .close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    cursor: pointer;
+    color: var(--dark-text);
+  }
+
+  h3 {
+    color: #131416;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29.05px;
+    text-align: center;
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+    text-align: center;
+    color: var(--dark-text);
+  }
+
+  input {
+    width: calc(100% - 40px);
+    border: 1px solid #BFBFBF;
+    background: #F6F6F6;
+    padding: 12px 20px;
+    gap: 10px;
+    border-radius: 100px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+
+    &:hover {
+      border: 1px solid #A4A4A4;
+      color: #262524;
+    }
+
+    &:focus-within {
+      outline: 1px solid #A4A4A4;
+      border: 1px solid #F6F6F6;
+    }
+  }
+
+  .error {
+    outline: 1px solid #E23207;
+    border: 0;
+  }
+
+  ::placeholder {
+    color: #75777A;
+    opacity: 1;
+  }
+
+  .error-message {
+    color: #E23207;
+  }
+
+  .sent-message {
+    color: #000000;
+  }
+
+  .form-message {
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 0 0 20px;
+    font-weight: 400;
+    line-height: 16px;
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "newsBanner": false,
+  "customSupportPrice": 1000,
+  "advantagesCount": 6,
+  "standardSupportPrice": 7000,
+  "premiumSupportPrice": 20000,
+  "clientsCount": "65+",
+  "email": "support@itpower.com.ua",
+  "telegram": "itpower_ua",
+  "token": "910971390:AAFXCtSGcBPfhEbVISSf33t2e5MhPKXRqSw",
+  "chatId": "-331211245",
+  "phoneNumbers": [
+    "+380 (97) 144 44 14"
+  ],
+  "clientsImages": [
+    {
+      "link": "https://felizata.com.ua/",
+      "file": "assets/img/clients-img/unatis.svg",
+      "color": "#F3B700"
+    },
+    {
+      "link": "https://chergas.ck.ua/ ",
+      "file": "assets/img/clients-img/Cherkasygas.svg",
+      "color": "#FFFFFF"
+    },
+    {
+      "link": "https://kyivcity.gov.ua/",
+      "file": "assets/img/clients-img/KMDA.svg",
+      "color": "#FFFFFF"
+    },
+    {
+      "link": "https://ravlyk.club/",
+      "file": "assets/img/clients-img/ravlyk.svg",
+      "color": "#FF6666"
+    },
+    {
+      "link": "https://kyivvodfond.com.ua/",
+      "file": "assets/img/clients-img/kyivvodfond.svg",
+      "color": "#FFFFFF"
+    },
+    {
+      "link": "https://blcar.services/",
+      "file": "assets/img/clients-img/bl.svg",
+      "color": "#080A0B"
+    },
+    {
+      "link": "https://bukovytsia.com/",
+      "file": "assets/img/clients-img/bukovytsia.svg",
+      "color": "#B9EAFF"
+    },
+    {
+      "link": "https://vselink.com/",
+      "file": "assets/img/clients-img/vselink.svg",
+      "color": "#FFFFFF"
+    },
+    {
+      "link": "https://oltest.com.ua/",
+      "file": "assets/img/clients-img/oltest.svg",
+      "color": "#FFFFFF"
+    },
+    {
+      "link": "https://gioc.kyivcity.gov.ua/",
+      "file": "assets/img/clients-img/gioc.svg",
+      "color": "#FFFFFF"
+    },
+    {
+      "link": "https://autooriginal.de/",
+      "file": "assets/img/clients-img/autooriginal.svg",
+      "color": "#FFFFFF"
+    },
+    {
+      "link": "https://aqua-climate.com.ua/ua",
+      "file": "assets/img/clients-img/aqua.svg",
+      "color": "#FFFFFF"
+    }
+  ]
+}

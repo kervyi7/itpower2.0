@@ -1,0 +1,345 @@
+<main>
+  <div class="circle" home></div>
+  <header [class.header-background]="!pagesTop">
+    <div class="logo">
+      <img src="assets/img/logo.svg" alt="logo">
+    </div>
+    <nav *ngIf="!isMobile" class="anchors-container">
+      <span class="nav-item" (click)="scrollTo('servicesRef')">{{'HEADER.SERVICES' | translate }}</span>
+      <span class="nav-item" (click)="scrollTo('advantagesRef')">{{'HEADER.ADVANTAGES' | translate }}</span>
+      <span class="nav-item" (click)="scrollTo('clientsRef')">{{'HEADER.CLIENTS' | translate }}</span>
+      <span class="nav-item">
+        <a href="https://itlink.com.ua/" target="_blank">
+          {{'HEADER.GSM' | translate}}
+        </a>
+      </span>
+      <span class="nav-item" (click)="scrollTo('priceRef')">{{'HEADER.PRICE' | translate }}</span>
+      <span class="nav-item" (click)="scrollTo('contactsRef')">{{'HEADER.CONTACTS' | translate }}</span>
+    </nav>
+    <div class="languages-phone-container">
+      <span *ngIf="!isSmallMobile" class="phone" (click)="callTo(config.phoneNumbers[0])">
+        <img src="assets/img/phone-icon.svg" alt="phone icon">{{config.phoneNumbers[0]}}</span>
+      <img *ngIf="!isSmallMobile" (click)="changeLanguage('en')" [class.darken]="selectedLanguage!='en'"
+        src="assets/img/usa-flag.svg" alt="language icon">
+      <img *ngIf="!isSmallMobile" (click)="changeLanguage('ua')" [class.darken]="selectedLanguage!='ua'"
+        src="assets/img/ua-flag.svg" alt="language icon">
+      <div *ngIf="isMobile" class="nav-icon" (click)="toggleMenu()" [ngClass]="isMenuOpened ? 'open' : ''">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+  <nav *ngIf="isMobile" [ngClass]="isMenuOpened ? 'mobile-nav' : 'hide'">
+    <div class="anchors-container">
+      <span class="nav-item" (click)="scrollTo('servicesRef')">{{'HEADER.SERVICES' | translate }}</span>
+      <span class="nav-item" (click)="scrollTo('advantagesRef')">{{'HEADER.ADVANTAGES' | translate }}</span>
+      <span class=" nav-item" (click)="scrollTo('clientsRef')">{{'HEADER.CLIENTS' | translate }}</span>
+      <span class="nav-item">
+        <a href="https://itlink.com.ua/" target="_blank">
+          {{'HEADER.GSM' | translate}}
+        </a>
+      </span>
+      <span class="nav-item" (click)="scrollTo('priceRef')">{{'HEADER.PRICE' | translate }}</span>
+      <span class="nav-item" (click)="scrollTo('contactsRef')">{{'HEADER.CONTACTS' | translate }}</span>
+      <div class="languages-phone-container" *ngIf="isSmallMobile">
+        <span class="phone" (click)="callTo(config.phoneNumbers[0])">
+          <img src="assets/img/phone-icon.svg" alt="phone icon">{{config.phoneNumbers[0]}}</span>
+        <div class="languages-container">
+          <div class="language" (click)="changeLanguage('en')">
+            <img [class.darken]="selectedLanguage!='en'" src="assets/img/usa-flag.svg" alt="language icon">
+            <span>ENG</span>
+          </div>
+          <div class="language" (click)="changeLanguage('ua')">
+            <img [class.darken]="selectedLanguage!='ua'" src="assets/img/ua-flag.svg" alt="language icon">
+            <span>UKR</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div [class.disable-scroll]="isMenuOpened">
+    <section id="homeRef" class="home-block">
+      <div *ngIf="config.newsBanner" class="news-banner">
+        <div class="banner-header">{{'HOME.NEWS_BANNER_HEADER' | translate}}</div>
+        <p>{{'HOME.NEWS_BANNER_TEXT' | translate}}</p>
+      </div>
+      <div class="text-img-container content-container">
+        <div class="text-wrapper">
+          <h1>{{'HOME.MAIN_TEXT' | translate}}</h1>
+          <div class="icon-text-container">
+            <span class="icon-text"><img src="assets/img/check.svg" alt="check icon">{{'HOME.OUTSOURCING' |
+              translate}}</span>
+            <span class="icon-text"><img src="assets/img/check.svg" alt="check icon">{{'HOME.SECURITY' |
+              translate}}</span>
+            <span class="icon-text"><img src="assets/img/check.svg" alt="check icon">{{'HOME.TELEPHONY' |
+              translate}}</span>
+          </div>
+          <app-button text="{{'HOME.ORDER_SERVICE' | translate}}" [isColored]=true
+            (click)="scrollTo('contactsRef')"></app-button>
+        </div>
+        <img class="img-lamp" src="assets/img/lamp.png" alt="main lamp image">
+      </div>
+    </section>
+    <section class="company-block">
+      <div class="circle" about1></div>
+      <div class="circle" about2></div>
+      <div class="img-wrapper">
+        <div class="img-description-block">
+          <h2>{{'COMPANY.LEADER_NAME' | translate}}</h2>
+          <p>{{'COMPANY.TEAM_LEADER' | translate}}</p>
+        </div>
+        <img src="assets/img/photo.webp" alt="team leader's photo" loading="lazy">
+      </div>
+      <div class="header-text-wrapper">
+        <h2>{{'COMPANY.HEADER' | translate}}</h2>
+        <p>{{'COMPANY.TEXT_PARAGRAPH1' | translate}}</p>
+        <p>{{'COMPANY.TEXT_PARAGRAPH2' | translate}}</p>
+      </div>
+    </section>
+    <section id="servicesRef" class="services-block content-container">
+      <div class="circle" services1></div>
+      <div class="circle" services2></div>
+      <h2>{{'SERVICES.HEADER' | translate}}</h2>
+      <div class="cards-container">
+        <app-card class="card" icon="assets/img/card-icons/card1.svg" header="{{'SERVICES.CARD_HEADER1' | translate}}"
+          text="{{'SERVICES.CARD_TEXT1' | translate}}"></app-card>
+        <app-card icon="assets/img/card-icons/card2.svg" header="{{'SERVICES.CARD_HEADER2' | translate}}"
+          text="{{'SERVICES.CARD_TEXT2' | translate}}"></app-card>
+        <app-card icon="assets/img/card-icons/card3.svg" header="{{'SERVICES.CARD_HEADER3' | translate}}"
+          text="{{'SERVICES.CARD_TEXT3' | translate}}"></app-card>
+        <app-card icon="assets/img/card-icons/card4.svg" header="{{'SERVICES.CARD_HEADER4' | translate}}"
+          text="{{'SERVICES.CARD_TEXT4' | translate}}"></app-card>
+        <app-card icon="assets/img/card-icons/card5.svg" header="{{'SERVICES.CARD_HEADER5' | translate}}"
+          text="{{'SERVICES.CARD_TEXT5' | translate}}"></app-card>
+        <app-card icon="assets/img/card-icons/card6.svg" header="{{'SERVICES.CARD_HEADER6' | translate}}"
+          text="{{'SERVICES.CARD_TEXT6' | translate}}"></app-card>
+      </div>
+    </section>
+    <section id="advantagesRef" class="advantages-block">
+      <h2>{{'ADVANTAGES.HEADER' | translate}}</h2>
+      <div class="advantages-container" #cardContainer (mousedown)="mouseDownHandler($event)"
+        (mousemove)="mouseMoveHandler($event)" (mouseup)="mouseUpHandler()">
+        <div *ngFor="let card of advantages" class="card">
+          <app-card [color]="card.color" header="{{card.header | translate}}"
+            text="{{card.text | translate}}"></app-card>
+        </div>
+      </div>
+    </section>
+    <section id="clientsRef" class="dots-layout">
+      <div class="clients-block">
+        <div class="text-container">
+          <h2>{{'CLIENTS.HEADER' | translate}}</h2>
+          <p>{{'CLIENTS.TEXT1' | translate}} <span>{{config.clientsCount}}</span> {{'CLIENTS.TEXT2' | translate}}</p>
+        </div>
+        <div class="images-container">
+          <div *ngFor="let image of config.clientsImages" class="image" [style.background]="image.color">
+            <img [src]="image.file" (click)="goToLink(image.link, true)" alt="client's icon" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="priceRef" class="price-block">
+      <div class="circle" price></div>
+      <div class="content-container">
+        <h2>{{'PRICE.HEADER' | translate}}</h2>
+        <div class="services-container">
+          <div class="service">
+            <div class="header-description-block">
+              <h3>{{'PRICE.CUSTOM_SUPPORT' | translate}}</h3>
+              <div class="check-description">
+                <img src="assets/img/green-check.svg" alt="icon" loading="lazy">
+                <p>{{'PRICE.INDIVIDUAL_REQUESTS' | translate}}</p>
+              </div>
+            </div>
+            <div class="price-button-block">
+              <div class="price">
+                <p>{{'PRICE.FROM' | translate}}
+                  <span> {{config.customSupportPrice}} </span>
+                  {{'PRICE.PER_HOUR' | translate}}
+                </p>
+              </div>
+              <app-button (click)="scrollTo('contactsRef')" text="{{'PRICE.CONTACT_US' | translate}}"
+                [isColored]=false></app-button>
+            </div>
+          </div>
+          <div class="service white-block">
+            <div class="highlighted-header">
+              {{'PRICE.POPULAR' | translate}}
+            </div>
+            <div class="header-description-block">
+              <h3>{{'PRICE.STANDARD_SUPPORT' | translate}}</h3>
+              <div class="check-description">
+                <img src="assets/img/green-check.svg" alt="icon" loading="lazy">
+                <p>{{'PRICE.REMOTE_SUPPORT' | translate}}</p>
+              </div>
+              <div class="check-description">
+                <img src="assets/img/green-check.svg" alt="icon" loading="lazy">
+                <p>{{'PRICE.IT_SYSTEM_MONITORING' | translate}}</p>
+              </div>
+              <div class="check-description">
+                <img src="assets/img/green-check.svg" alt="icon" loading="lazy">
+                <p>{{'PRICE.SCHEDULED_MAINTENANCE' | translate}}</p>
+              </div>
+            </div>
+            <div class="price-button-block">
+              <div class="price">
+                <p>
+                  <span> {{config.standardSupportPrice}} </span>
+                  {{'PRICE.PER_MONTH' | translate}}
+                </p>
+              </div>
+              <app-button (click)="scrollTo('contactsRef')" text="{{'PRICE.CONTACT_US' | translate}}"
+                [isColored]=true></app-button>
+            </div>
+          </div>
+          <div class="service">
+            <div class="header-description-block">
+              <h3>{{'PRICE.PREMIUM_SUPPORT' | translate}}</h3>
+              <div class="check-description">
+                <img src="assets/img/green-check.svg" alt="icon" loading="lazy">
+                <p>{{'PRICE.REMOTE_SUPPORT' | translate}}</p>
+              </div>
+              <div class="check-description">
+                <img src="assets/img/green-check.svg" alt="icon" loading="lazy">
+                <p>{{'PRICE.IT_SYSTEM_MONITORING' | translate}}</p>
+              </div>
+              <div class="check-description">
+                <img src="assets/img/green-check.svg" alt="icon" loading="lazy">
+                <p>{{'PRICE.SCHEDULED_MAINTENANCE' | translate}}</p>
+              </div>
+              <div class="check-description">
+                <img src="assets/img/green-check.svg" alt="icon" loading="lazy">
+                <p>{{'PRICE.ENGINEER_VISITS' | translate}}</p>
+              </div>
+              <div class="check-description">
+                <img src="assets/img/green-check.svg" alt="icon" loading="lazy">
+                <p>{{'PRICE.SPARE_EQUIPMENT' | translate}}</p>
+              </div>
+            </div>
+            <div class="price-button-block">
+              <div class="price">
+                <p>
+                  <span> {{config.premiumSupportPrice}} </span>
+                  {{'PRICE.PER_MONTH' | translate}}
+                </p>
+              </div>
+              <app-button (click)="scrollTo('contactsRef')" text="{{'PRICE.CONTACT_US' | translate}}"
+                [isColored]=false></app-button>
+            </div>
+          </div>
+        </div>
+        <div class="free-service">
+          <div>
+            <div class="highlighted-header">{{'PRICE.FREE' | translate}}</div>
+            <h3>{{'PRICE.FREE_CONSULTATION_TITLE' | translate}}</h3>
+            <p>{{'PRICE.FREE_CONSULTATION' | translate}}</p>
+          </div>
+          <app-button text="{{'PRICE.GET_FREE_CONSULTATION' | translate}}" [isColored]=false
+            (click)="scrollTo('contactsRef')"></app-button>
+        </div>
+      </div>
+    </section>
+    <section id="contactsRef" class="contacts-block">
+      <div class="circle" contacts1></div>
+      <div class="circle" contacts2></div>
+      <div class="content-container">
+        <div class="info">
+          <h2>{{'CONTACTS.HEADER' | translate}}</h2>
+          <div class="icon-text-block">
+            <img src="assets/img/location.svg" alt="location icon" loading="lazy">
+            <p>{{'CONTACTS.LOCATION' | translate}}</p>
+          </div>
+          <div class="icon-text-block">
+            <img src="assets/img/phone-contacts.svg" alt="phone icon" loading="lazy">
+            <div class="phone-numbers">
+              <p *ngIf="config.phoneNumbers[0]" (click)="callTo(config.phoneNumbers[0])">{{config.phoneNumbers[0]}}
+              </p>
+              <p *ngIf="config.phoneNumbers[1]" (click)="callTo(config.phoneNumbers[0])">{{config.phoneNumbers[1]}}
+              </p>
+              <p *ngIf="config.phoneNumbers[2]" (click)="callTo(config.phoneNumbers[0])">{{config.phoneNumbers[2]}}
+              </p>
+            </div>
+          </div>
+          <div class="icon-text-block">
+            <img src="assets/img/mail.svg" alt="mail icon" loading="lazy">
+            <p class="link" (click)="goToLink('mailto:'+config.email, false)">{{config.email}}</p>
+          </div>
+          <div class="icon-text-block">
+            <img src="assets/img/telegram-logo.svg" alt="telegram icon" loading="lazy">
+            <p class="link" (click)="goToLink('http://t.me/'+config.telegram, true)">&commat;{{config.telegram}}</p>
+          </div>
+        </div>
+        <div class="form">
+          <app-form header="{{'CONTACTS.FORM_HEADER' | translate}}"
+            inputPlaceholder="{{'CONTACTS.ENTER_EMAIL' | translate}}" inputType="email"
+            buttonText="{{'CONTACTS.SEND' | translate}}"></app-form>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="wiki-github-container">
+        <div class="card">
+          <div class="text-block">
+            <img src="assets/img/folder-open.svg" alt="wiki icon" loading="lazy">
+            <h3>{{'FOOTER.WIKI_HEADER' | translate}}</h3>
+            <p>{{'FOOTER.WIKI_TEXT' | translate}}</p>
+          </div>
+          <app-button text="{{'FOOTER.WIKI_BUTTON' | translate}}" [isColored]=false
+            (click)="goToLink('https://wiki.itpower.com.ua/', true)"></app-button>
+        </div>
+        <div class="card">
+          <div class="text-block">
+            <img src="assets/img/github.svg" alt="github icon" loading="lazy">
+            <h3>{{'FOOTER.GITHUB_HEADER' | translate}}</h3>
+            <p>{{'FOOTER.GITHUB_TEXT' | translate}}</p>
+          </div>
+          <app-button text="{{'FOOTER.GITHUB_BUTTON' | translate}}" [isColored]=false
+            (click)="goToLink('https://github.com/itpowerua?tab=repositories', true)"></app-button>
+        </div>
+      </div>
+      <div class="footer-block">
+        <img src="assets/img/logo.svg" alt="logo">
+        <div class="info-block">
+          <div class="info">
+            <h4>{{'FOOTER.SITE' | translate}}</h4>
+            <p class="nav-item" (click)="scrollTo('servicesRef')">{{'HEADER.SERVICES' | translate }}</p>
+            <p class="nav-item" (click)="scrollTo('advantagesRef')">{{'HEADER.ADVANTAGES' | translate }}</p>
+            <p class="nav-item" (click)="scrollTo('clientsRef')">{{'HEADER.CLIENTS' | translate }}</p>
+            <p class="nav-item" (click)="scrollTo('priceRef')">{{'HEADER.PRICE' | translate }}</p>
+          </div>
+          <div class="contacts-info info">
+            <h4>{{'FOOTER.CONTACTS' | translate}}</h4>
+            <div class="icon-text-block">
+              <img src="assets/img/location.svg" alt="location icon" loading="lazy">
+              <p>{{'CONTACTS.LOCATION' | translate}}</p>
+            </div>
+            <div class="icon-text-block">
+              <img src="assets/img/phone-contacts.svg" alt="phone icon" loading="lazy">
+              <div class="phone-numbers">
+                <p *ngIf="config.phoneNumbers[0]" (click)="callTo(config.phoneNumbers[0])">{{config.phoneNumbers[0]}}
+                </p>
+                <p *ngIf="config.phoneNumbers[1]" (click)="callTo(config.phoneNumbers[0])">{{config.phoneNumbers[1]}}
+                </p>
+                <p *ngIf="config.phoneNumbers[2]" (click)="callTo(config.phoneNumbers[0])">{{config.phoneNumbers[2]}}
+                </p>
+              </div>
+            </div>
+            <div class="icon-text-block">
+              <img src="assets/img/mail.svg" alt="mail icon" loading="lazy">
+              <p class="link" (click)="goToLink('mailto:'+config.email, false)">{{config.email}}</p>
+            </div>
+            <div class="icon-text-block">
+              <img src="assets/img/telegram-logo.svg" alt="telegram icon" loading="lazy">
+              <p class="link" (click)="goToLink('http://t.me/'+config.telegram, false)">&commat;{{config.telegram}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>{{'FOOTER.COPYRIGHT' | translate}} {{date | date:'yyyy' }} {{'FOOTER.COPYRIGHT_TEXT' | translate}}</p>
+      </div>
+    </footer>
+  </div>
+</main>

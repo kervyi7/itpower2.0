@@ -1,0 +1,112 @@
+{
+  "HEADER": {
+    "SERVICES": "Services",
+    "ADVANTAGES": "Advantages",
+    "PRICE": "Prices",
+    "GSM": "GSM Rental",
+    "CLIENTS": "Clients",
+    "CONTACTS": "Contacts"
+  },
+  "HOME": {
+    "NEWS_BANNER_HEADER": "Text",
+    "NEWS_BANNER_TEXT": "Order a service with a 10% discount now",
+    "MAIN_TEXT": "We always find a solution",
+    "OUTSOURCING": "IT Outsourcing",
+    "SECURITY": "IT Security",
+    "TELEPHONY": "IP Telephony",
+    "ORDER_SERVICE": "Order a Service"
+  },
+  "COMPANY": {
+    "HEADER": "About the Company",
+    "TEXT_PARAGRAPH1": "Our company of professional system administrators provides services for remote server administration, as well as configuration of dedicated, virtual, and physical servers. We offer IT outsourcing services - the transfer of certain functions to a third-party organization specializing in the relevant field, including IT services.",
+    "TEXT_PARAGRAPH2": "Outsourcing typically involves ensuring the uninterrupted operation of IT services or individual IT systems. Our employees have extensive experience in servicing, installing, and configuring server software, allowing them to solve problems quickly and provide a high level of service.",
+    "LEADER_NAME": "Artur Ilchuk",
+    "TEAM_LEADER": "Team Leader of ITPOWER"
+  },
+  "SERVICES": {
+    "HEADER": "Our Services",
+    "CARD_HEADER1": "IP Telephony",
+    "CARD_TEXT1": "Simplify all work processes, making them more efficient and convenient",
+    "CARD_HEADER2": "Audit and Modernization",
+    "CARD_TEXT2": "Helps identify weaknesses in infrastructure, complex processes requiring modernization",
+    "CARD_HEADER3": "System Administration",
+    "CARD_TEXT3": "Providing outsourcing services and IT infrastructure maintenance",
+    "CARD_HEADER4": "SKS Installation",
+    "CARD_TEXT4": "Modern design, unification of communications, and comfort in your office",
+    "CARD_HEADER5": "Cloud Solutions",
+    "CARD_TEXT5": "Help reduce capital costs, minimize security threats, and increase reliability",
+    "CARD_HEADER6": "IT Security",
+    "CARD_TEXT6": "Risk control related to information security threats, protection of business integrity, and client data"
+  },
+  "ADVANTAGES": {
+    "HEADER": "Advantages",
+    "TITLE1": "Audit and Configuration",
+    "TEXT1": "Every server that comes for maintenance undergoes an IT audit - identification of bottlenecks and their correction",
+    "TITLE2": "Round-the-Clock Monitoring",
+    "TEXT2": "We constantly monitor the status of your servers; in case of problems, we immediately start solving them",
+    "TITLE3": "Service Maintenance",
+    "TEXT3": "Regular updates of OS and software, vulnerability elimination, backup checks, hardware issues, etc.",
+    "TITLE4": "Software",
+    "TEXT4": "We strive to use free software. First and foremost, it's an opportunity to reduce your expenses",
+    "TITLE5": "Security",
+    "TEXT5": "We guarantee the preservation of confidential information",
+    "TITLE6": "Experience",
+    "TEXT6": "We have significant experience in this field - over 10 years"
+  },
+  "CLIENTS": {
+    "HEADER": "Our Clients",
+    "TEXT1": "Successfully Launched",
+    "TEXT2": "Projects"
+  },
+  "PRICE": {
+    "HEADER": "Service Prices",
+    "POPULAR": "Most Popular",
+    "CUSTOM_SUPPORT": "Custom Support",
+    "STANDARD_SUPPORT": "Standard Support",
+    "PREMIUM_SUPPORT": "Premium Support",
+    "INDIVIDUAL_REQUESTS": "Individual Requests",
+    "REMOTE_SUPPORT": "Remote Support",
+    "IT_SYSTEM_MONITORING": "IT System Monitoring",
+    "SCHEDULED_MAINTENANCE": "Scheduled Maintenance",
+    "ENGINEER_VISITS": "Engineer Visits",
+    "SPARE_EQUIPMENT": "Spare Equipment",
+    "CONTACT_US": "Contact Us",
+    "FROM": "from",
+    "PER_HOUR": "UAH/hour",
+    "PER_MONTH": "UAH/month",
+    "FREE": "Free",
+    "FREE_CONSULTATION_TITLE": "Ask us a question",
+    "FREE_CONSULTATION": "We offer expert guidance and support for all your IT inquiries. Our experience is for users seeking assistance with various challenges. We aim to empower individuals with valuable insights and solutions tailored to their specific needs.",
+    "GET_FREE_CONSULTATION": "Get Free Consultation"
+  },
+  "CONTACTS": {
+    "HEADER": "Contacts",
+    "LOCATION": "Kyiv, Ukraine",
+    "FORM_HEADER": "Leave your Email",
+    "ENTER_EMAIL": "Enter email",
+    "SEND": "Send"
+  },
+  "FOOTER": {
+    "WIKI_HEADER": "WIKI-ITPower",
+    "WIKI_TEXT": "Knowledge base of our solutions",
+    "WIKI_BUTTON": "Go to Knowledge Base",
+    "GITHUB_HEADER": "Github",
+    "GITHUB_TEXT": "Collection of our solution repositories",
+    "GITHUB_BUTTON": "Go to Github",
+    "SITE": "SITE",
+    "CONTACTS": "CONTACTS",
+    "COPYRIGHT": "©",
+    "COPYRIGHT_TEXT": "ITPOWER. All rights reserved."
+  },
+  "POPUP": {
+    "WE_CALL_YOU": "We Will Call You",
+    "ENTER_PHONE": "Enter your phone number and we will call you back",
+    "CALL_ME": "Call Me"
+  },
+  "FORM": {
+    "EMAIL_ERROR": "Invalid email address",
+    "PHONE_ERROR": "Invalid phone number",
+    "PHONE_SENT": "Thank you, your request has been recorded! We will be in touch soon.",
+    "EMAIL_SENT": "The mail is registered, we will contact you soon."
+  }
+}

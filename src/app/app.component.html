@@ -1,0 +1,9 @@
+<div [class.form-layout]="isPopupVisible">
+  <div class="phone-form" *ngIf="isPopupVisible">
+    <app-form header="{{'POPUP.WE_CALL_YOU' | translate}}" text="{{'POPUP.ENTER_PHONE' | translate}}" inputType="tel"
+      buttonText="{{'POPUP.CALL_ME' | translate}}" (onClose)="togglePopupVisibility()"></app-form>
+  </div>
+</div>
+<app-main-page [config]="config"></app-main-page>
+<button aria-label="Button" class="button" (click)="togglePopupVisibility()"><img src="../assets/img/phone-icon.svg"
+    alt="button phone icon"></button>

@@ -1,0 +1,32 @@
+:root {
+  --light-text: #C9CACD;
+  --dark-text: #242424;
+  --dark-header: #141517;
+  --white-text: #FFFFFF;
+  --darken-text: #8C8F96;
+  --box-shadow: 0px 2px 4px 1px #0000003D;
+  --card-background: #131416;
+  --dark-background: #1A1A1A;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url(./assets/fonts/font.woff2) format('woff2');
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Inter, sans-serif;
+  letter-spacing: 0.02em;
+  cursor: default;
+  background: var(--dark-text);
+  color: var(--white-text);
+}
